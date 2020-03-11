@@ -18,8 +18,8 @@ db.on('open', () => {
     console.log('Connection made!');
 });
 
-agg.get('/',(req,res)=>{
-	res.send("App is working")
+app.get('/',(req,res)=>{
+	res.send("App is working");
 })
 
 
