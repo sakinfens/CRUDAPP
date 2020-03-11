@@ -18,6 +18,11 @@ db.on('open', () => {
     console.log('Connection made!');
 });
 
+agg.get('/',(req,res)=>{
+	res.send("App is working")
+})
+
+
 app.listen(process.env.PORT,()=>{
 	console.log('app is listening on '+ process.env.PORT)
 })
