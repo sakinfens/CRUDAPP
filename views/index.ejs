@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spots Home</title>
+</head>
+<body>
+	<h1>Spot Home</h1>
+
+	<% for (var i = 0; i < spots.length; i++) { %>
+	<div>
+		<a href="/spots/<%=spots[i].id%>">
+			<h2><%= spots[i].spot %></h2>
+		</a>
+		<p><%= spots[i].name %></p>
+		<p><%= spots[i].address %></p>
+		<p><%= spots[i].rating %></p>
+	</div>
+
+<%}%>
+</body>
+</html>

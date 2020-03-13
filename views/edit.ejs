@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spots Home</title>
+</head>
+<body>
+	<h1>Edit Spot</h1>
+	<form action="/spots/<%=spots.id%>?method=PUT" method="POST">
+		Name <input type="text" name="name" value="<%=spots.name%>">
+		Spot <input type="text" name="spot" value="<%=spots.spot%>">
+		Address <input type="text" name="address" value="<%=spots.address%>">
+		Rating <input type="text" name="rating" value="<%=spots.rating%>">
+		<input type="submit" value="Submit Changes">
+	</form>
+</body>
+</html>

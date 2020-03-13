@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>The Spot</h1>
+	<h2><%=spots.spot%></h2>
+	<p>Name: <%=spots.name%></p>
+	<p>Address: <%=spots.address%></p>
+	<p>Rating: <%=spots.rating%></p>
+	<form action="/spots/<%=spots.id%>?_method=DELETE" method="POST">
+		<input type="submit" value="DELETE">
+	</form>
+	<a href="/spots/<%=spots.id%>/edit">Edit</a>
+</body>
+</html>
