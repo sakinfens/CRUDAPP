@@ -30,22 +30,32 @@ router.get('/spots',(req,res)=>{
 		});
 	})
 })
+// router.get('/spots/new',(req,res)=>{
+// 	res.render('new.ejs');
+// })
 router.get('/spots/new',(req,res)=>{
-	res.render('new.ejs');
+	Spots.find({},(error,allSpots)=>{
+		res.render('new.ejs',{
+			spots: allSpots
+		});
+	})
 })
 router.post('/spots',(req,res)=>{
 	Spots.create(req.body,(error, createdSpot)=>{
 		res.redirect('/spots');
 	})
 })
+/////////////////////
+
 
 router.put('/spots/:id',(req,res)=>{
-	console.log('hi')
-	Spots.findByIdAndUpdate(req.params.id, req.body,{new:true},(err,updated)=>{
-		console.log(updated)
+	Spots.findByIdAndUpdate(req.params.id, req.body, {new:true},(error,updatedModel)=>{
 		res.redirect('/spots');
 	})
-})
+});
+/////////////////////
+
+
 
 
 router.get('/spots/:id/edit',(req,res)=>{

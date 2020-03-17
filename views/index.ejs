@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
 	<title>Spots Home</title>
 </head>
-<body>
-	<h1>Spot Home</h1>
 
+<body>
+	<nav>
+		<h1>Cheap Spots</h1>
+		<div>
+			<a href="/spots"><h1 style="border: 1px solid orange">Home</h1></a>
+			<a href="/spots/new"><h1 >Add Spot</h1></a>
+		</div>
+	</nav>
+
+	<section class="first">
+		<div>
+			<h2><span> <%=spots.length%> </span>Places Listed</h2>
+			<p>Find your spot on a budget</p>
+		</div>
+	</section>
+	<h1 class="title">Spots</h1>
+	<section class="wrapper second">
+		
 	<% for (var i = 0; i < spots.length; i++) { %>
 	<div>
 		<a href="/spots/<%=spots[i].id%>">
 			<h2><%= spots[i].spot %></h2>
 		</a>
-		<p><%= spots[i].name %></p>
-		<p><%= spots[i].address %></p>
-		<p><%= spots[i].rating %></p>
+		<p>Muncher: <span><%= spots[i].name %></span></p>
+		<p>Area: <span><%= spots[i].address %></span></p>
+		<p>Stars: <span><%= spots[i].rating %></span></p>
 	</div>
 
 <%}%>
+</section>
 </body>
 </html>

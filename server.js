@@ -21,9 +21,12 @@ db.on('open', () => {
 
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
+app.use(express.static('public'));
 
 const crudController = require('./controllers/crud.js');
 app.use(crudController);
+
+
 
 
 

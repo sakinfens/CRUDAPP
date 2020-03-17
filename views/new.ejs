@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+	<title>New Spots</title>
 </head>
-<body>
+<body style="background-color: mediumpurple">
+	<nav>
+		<h1>Cheap Spots</h1>
+		<div>
+			<a href="/spots"><h1>Home</h1></a>
+			<a href="/spots/new"><h1 style="border: 1px solid orange">Add Spot</h1></a>
+		</div>
+	</nav>
+
+	<section class="first">
+		<div>
+			<h2><span> <%=spots.length%> </span>Places Listed</h2>
+			<p>Add to the Community</p>
+		</div>
+	</section>
 	<form action="/spots" method="POST">
-		Name <input type="text" name="name">
-		Spot <input type="text" name="spot">
-		Address <input type="text" name="address">
-		Rating <input type="text" name="rating">
-		<input type="submit" value="Create Spot">
+		<h1>Add New</h1>
+		<input type="text" name="name" placeholder="Enter your name"><br>
+		 <input type="text" name="spot" placeholder="Enter your spot"><br>
+		 <input type="text" name="address" placeholder="Enter the area"><br>
+		<input type="text" name="rating" placeholder="Enter your rating"><br>
+		<input type="submit" value="Create Spot"><br>
 	</form>
 </body>
 </html>
