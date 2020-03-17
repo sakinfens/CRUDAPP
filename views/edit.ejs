@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Spots Home</title>
+	<link rel="stylesheet" type="text/css" href="/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+	<title>Spots Edit</title>
 </head>
 <body>
-	<h1>Edit Spot</h1>
-	<form action="/spots/<%=spots.id%>?_method=PUT" method="POST">
-		Name <input type="text" name="name" value="<%=spots.name%>">
-		Spot <input type="text" name="spot" value="<%=spots.spot%>">
-		Address <input type="text" name="address" value="<%=spots.address%>">
-		Rating <input type="text" name="rating" value="<%=spots.rating%>">
+	<nav>
+		<a href="/spots"><h1>Cheap Spots</h1></a>
+		<div>
+			<a href="/spots"><h1>Home</h1></a>
+			<a href="/spots/new"><h1>Add Spot</h1></a>
+		</div>
+	</nav>
+
+	<section class="first">
+		<div>
+			<h2>Edit Spot</h2>
+			<p>Find your spot on a budget</p>
+		</div>
+	</section>
+	<form class="edit" action="/spots/<%=spots.id%>?_method=PUT" method="POST">
+		<h1>Edit Spots</h1>
+		<input type="text" name="name" value="<%=spots.name%>"><br>
+		<input type="text" name="spot" value="<%=spots.spot%>"><br>
+		<input type="text" name="address" value="<%=spots.address%>"><br>
+		<input type="text" name="rating" value="<%=spots.rating%>"><br>
 		<input type="submit" value="Submit Changes">
 	</form>
 </body>
